@@ -18,7 +18,7 @@
 
 #
 
-This project provides a development environment for PyTorch using Visual Studio Code and Docker. It is based on the [Visual Studio Code Dev Container](https://github.com/Microsoft/vscode-remote-release) feature.
+This project provides a development environment for PyTorch using Visual Studio Code and Docker. It is based on the [Visual Studio Code Dev Container](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) feature.
 Being able to have immutable and reproducible development environments is a key part to successfully work with multiple projects.
 
 ## Features
