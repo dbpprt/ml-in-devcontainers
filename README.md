@@ -1,4 +1,23 @@
-# Immutable development environments for PyTorch powered by Visual Studio Code Dev Containers
+<p align="center">
+    <br>
+    <img src="https://ms-vscode-remote.gallerycdn.vsassets.io/extensions/ms-vscode-remote/remote-containers/0.279.0/1675955537911/Microsoft.VisualStudio.Services.Icons.Default" width="100"/>
+    <br>
+<p>
+<p align="center">
+    <a href="https://github.com/badges/shields/generate">
+        <img src="https://img.shields.io/badge/use%20this-template-blue?logo=github">
+    </a>
+    <a href="https://github.com/dennisbappert/ml-in-devcontainers/blob/main/LICENSE">
+        <img alt="GitHub" src="https://img.shields.io/badge/license-MIT-blue?color=red">
+    </a>
+</p>
+
+<h3 align="center">
+    <p>Immutable development environments for PyTorch powered by Visual Studio Code Dev Containers</p>
+</h3>
+
+#
+
 This project provides a development environment for PyTorch using Visual Studio Code and Docker. It is based on the [Visual Studio Code Dev Container](https://github.com/Microsoft/vscode-remote-release) feature.
 Being able to have immutable and reproducible development environments is a key part to successfully work with multiple projects.
 
