@@ -1,0 +1,30 @@
+{
+  // python env settings
+  "python.defaultInterpreterPath": "/opt/bin/conda/python",
+  "python.terminal.activateEnvironment": true,
+  // python formatting
+  "python.formatting.provider": "black",
+  "python.analysis.typeCheckingMode": "basic",
+  // python formatting
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+  },
+  // required to make pylint work with pytorch
+  "python.linting.pylintArgs": [
+    "--generated-members=numpy.* ,torch.*"
+  ],
+  // default language server
+  "python.languageServer": "Pylance",
+  // python linting
+  "python.linting.enabled": true,
+  "python.linting.banditEnabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.lintOnSave": true,
+  // editor settings
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2
+}

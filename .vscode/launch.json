@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Python: main.py",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            // set your desired program
+            "program": "${workspaceFolder}${pathSeparator}main.py",
+            // set your desired arguments
+            "args": [],
+            "console": "integratedTerminal",
+            // you can configure environment variables
+            "env": {
+                // "PYTHONPATH": "../../"
+            }
+        }
+    ]
+}
