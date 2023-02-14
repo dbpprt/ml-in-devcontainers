@@ -5,7 +5,7 @@
     <br>
 <p>
 <p align="center">
-    <a href="https://github.com/badges/shields/generate">
+    <a href="https://github.com/dennisbappert/ml-in-devcontainers/generate">
         <img src="https://img.shields.io/badge/use%20this-template-blue?logo=github">
     </a>
     <a href="https://github.com/dennisbappert/ml-in-devcontainers/blob/main/LICENSE">
