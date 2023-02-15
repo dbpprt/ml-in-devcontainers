@@ -1,7 +1,24 @@
 {
   "name": "dev_environment",
-  "context": "..",
-  "dockerFile": "../docker/Dockerfile.gpu",
+  // "context": "..",
+  // "dockerFile": "../docker/Dockerfile.gpu",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "args": {
+      "BASE_REPOSITORY": "https://github.com/dennisbappert/ml-in-devcontainers@devel#egg=ml-in-devcontainers[dev]",
+      "PYTHON_VERSION": "3.10",
+      
+      // "PYTORCH_COMPUTE_PLATFORM": "cu117",
+      "PYTORCH_COMPUTE_PLATFORM": "cpu",
+
+      // "BASE_IMAGE": "nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04",
+      "BASE_IMAGE": "ubuntu:22.04",
+      
+      // "INSTALL_DOCKER": "1",
+      // "INSTALL_AWS_CLI": "1",
+      // "INSTALL_DOCKER_COMPOSE_V1": "1"
+    }
+  },
   "runArgs": [
     // if you have a GPU, you can use it inside the container
     "--gpus=all",
@@ -16,6 +33,9 @@
     // uncomment if you want to use Amazon SageMaker local mode which uses /tmp volume mounts on the host docker daemon
     "source=/tmp,target=/tmp,type=bind"
   ],
+  "remoteEnv": {
+    "PYTHONPATH": "${containerEnv:PATH}:${containerWorkspaceFolder}"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -28,8 +48,6 @@
         // python language support
         "ms-python.python",
         "ms-python.vscode-pylance",
-        // sort python imports
-        "ms-python.isort",
         // jupyter
         "ms-toolsai.jupyter",
         "ms-toolsai.vscode-jupyter-cell-tags",
@@ -44,6 +62,6 @@
         // "add.your.own.favorites",
       ]
     }
-  }
-  // "postCreateCommand": "chmod +x ./.devcontainer/setup.sh && sh ./.devcontainer/setup.sh"
+  },
+  "onCreateCommand": "apt-get update && apt-get install -y git && pip install -e '.[dev]'"
 }
